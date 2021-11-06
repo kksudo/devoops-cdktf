@@ -1,5 +1,9 @@
 .idea
 tmp
+.terraform
+.terraform.*
+terraform.*
+
 *.d.ts
 *.js
 node_modules
