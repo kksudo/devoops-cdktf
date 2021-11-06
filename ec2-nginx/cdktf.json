@@ -1,9 +1,9 @@
 {
   "language": "typescript",
   "app": "npm run --silent compile && node main.js",
-  "projectId": "eca12c87-bdb2-43d1-af25-84e4c9556f5c",
+  "projectId": "90610631-5c8b-495e-824b-a2af42a38974",
   "terraformProviders": [
-    "hashicorp/aws@~> 3.42"
+    "hashicorp/aws@~> 3.64"
   ],
   "terraformModules": [],
   "context": {
