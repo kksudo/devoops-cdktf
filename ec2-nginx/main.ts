@@ -1,7 +1,7 @@
 import {Construct} from 'constructs';
 import {App, TerraformStack, TerraformOutput} from 'cdktf';
 import {AwsProvider, EC2, VPC} from './.gen/providers/aws';
-import { readFileSync } from 'fs';
+import {readFileSync} from 'fs';
 
 class MyStack extends TerraformStack {
     constructor(scope: Construct, name: string) {
@@ -42,6 +42,7 @@ class MyStack extends TerraformStack {
                 },
             ]
         });
+
         const initScriptFile = readFileSync('./provision.sh', 'utf-8');
 
         // Configures the EC2 instance
