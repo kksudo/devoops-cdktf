@@ -52,5 +52,9 @@ There are few scripts to measure time deploy Cloud Development Kit for Terraform
 
 * [devoops-pulumi](https://github.com/ilyareist/devoops-pulumi)
 * [devoops conf](https://devoops.ru/en/talks/pulumi-and-cdk-for-terraform-programming-infrastructure-in%20high-level%20languages/)
+* [Introduction to cdktf](https://learn.hashicorp.com/tutorials/terraform/cdktf?in=terraform/cdktf)
+
+
+
 
 
