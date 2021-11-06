@@ -1,6 +1,7 @@
 import {Construct} from 'constructs';
 import {App, TerraformStack, TerraformOutput} from 'cdktf';
 import {AwsProvider, EC2, VPC} from './.gen/providers/aws';
+import { readFileSync } from 'fs';
 
 class MyStack extends TerraformStack {
     constructor(scope: Construct, name: string) {
@@ -41,15 +42,14 @@ class MyStack extends TerraformStack {
                 },
             ]
         });
+        const initScriptFile = readFileSync('./provision.sh', 'utf-8');
 
         // Configures the EC2 instance
         const instance = new EC2.Instance(this, 'compute', {
-            //Nginx
-            ami: 'ami-08ac35ebc1125d88c',
-            // Ubuntu
-            // ami: 'ami-08ac35ebc1125d88c',
+            ami: 'ami-047e03b8591f2d48a',
             instanceType: 't2.micro',
-            vpcSecurityGroupIds: [sg.id]
+            vpcSecurityGroupIds: [sg.id],
+            userData: initScriptFile
         })
 
         // Output similar terraform output
