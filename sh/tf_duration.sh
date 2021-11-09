@@ -11,4 +11,4 @@ printf "===\nNative terraform\n"
 printf  "Elapsed Time: %s seconds\n===\n" $(($end-$start))
 
 terraform destroy --auto-approve > /dev/null
-cd - || exit
+cd - > /dev/null || exit

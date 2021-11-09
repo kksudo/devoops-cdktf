@@ -15,6 +15,26 @@ In their talk the speakers would like to present other way of working with IaC, 
 
 There are few examples to demonstrate deploy infrastructure like ~~code~~ software without DSL and YAML.
 
+
+```shell
+├── ec2-nginx
+│   ├── cdktf.json
+│   ├── main.ts
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── provision.sh
+│   └── tsconfig.json
+├── ec2-nginx-terraform
+│   ├── main.tf
+│   ├── output.tf
+│   ├── provider.tf
+│   └── provision.sh
+├── README.md
+└── sh
+    ├── cdktf_duration.sh
+    └── tf_duration.sh
+```
+
 ### ec2-nginx   
 
 It's a simple example to deploy via CDKTF (typescript)
@@ -45,6 +65,7 @@ There are few scripts to measure time deploy Cloud Development Kit for Terraform
   * Terraform v1+
   * CDK for Terraform 0.6.4 ( The 0.7.0 CDKTF works unstable )
   * Node.js v16
+    * `npm install -g typescript`
   * an AWS account and AWS Access Credentials 
 * Move to `ec2-nginx` and run `cdktf deploy` 
 
